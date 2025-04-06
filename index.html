@@ -198,5 +198,23 @@
       <input type="submit" value="Enviar" />
     </form>
   </div>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31JM4JHQV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-P31JM4JHQV');
+  </script>
+  <!-- Script para rastrear el clic en el botón Enviar -->
+  <script>
+    document.querySelector('input[type="submit"]').addEventListener('click', function(event) {
+      gtag('event', 'submit_form', {
+        'event_category': 'Formulario',
+        'event_label': 'Envío de formulario'
+      });
+    });
+  </script>
 </body>
 </html>
